@@ -16,10 +16,10 @@
   <div class="container">
       
     <div class="title">
-      <div>
+    
         <h1>devfinder</h1>
         <!-- Light -->
-      </div>
+      
       <div class="theme">
         <h4>Dark</h4>
         <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -29,31 +29,38 @@
     </div>
     
     <div class="search">
-      <form action="">
+      <form action="" id="searchForm">
         <label>
-          <input type="text" id="search" name="search" placeholder="Search GitHub username...">
+          <input type="text" id="search" name="search" placeholder="Search GitHub username..." required>
         </label>
-        <!-- <button type="submit">Search</button> -->
+        <button type="submit">Search</button>
       </form>
     </div>
     
     <div class="card">
       <div class="avatar">
-        <p>Avatar</p>
       </div>
       <div class="name">
-        <h1>Name</h1>
-        <h3>Joined</h3>
+        <h1 id="username">Name</h1>
+        <h3 id="joined">Joined</h3>
+        <p id="atName"></p>
       </div>
       <div class="stats">
         <p>Repos</p>
         <p>Followers</p>
         <p>Following</p>
-    </div>
-    <div class="links">
-      <p>links</p>
-    </div>
+        <p id="repo"></p>
+        <p id="followers"></p>
+        <p id="following"></p>
+      </div>
+      <div class="links">
+        <p id="location"></p>
+        <p id="twitter"></p>
+        <p id="website"></p>
+        <p id="company"></p>
+      </div>
     </div>
   </div>
 </body>
+<script src="script.js"></script>
 </html>
