@@ -17,6 +17,7 @@ form.addEventListener('submit', function(e){
         document.querySelector('.avatar').innerHTML = ` <img src="${data.avatar_url}" />`;
         document.querySelector('#username').innerHTML = `${data.name}`;
         document.querySelector('#atName').innerHTML = `@${data.login}`;
+        document.querySelector('#bio').innerHTML = `@${data.bio}`;
 
         let date = data.created_at; 
         const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",

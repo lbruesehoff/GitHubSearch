@@ -1,6 +1,7 @@
 body{
     background-color: #f6f8ff;
     font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
 }
 
 
@@ -10,13 +11,10 @@ body{
     gap: 1rem;
     flex-direction: column;
     justify-content: space-evenly;
+    padding-top: 5%;
 }
 
 .title{
-    /* display: grid;
-    justify-content:center;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr); */
     grid-column: span 4;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -28,7 +26,7 @@ body{
     grid-column-start: 2;
 }
 
-.title h4{
+.title h2{
     text-transform: uppercase;
     color: #697C9A;
     display: inline;
@@ -60,6 +58,7 @@ body{
     left: 80%;
     top: 20%;
     font-size: 1.1rem;
+    letter-spacing: 1px;
     font-family: 'Space Mono', monospace;
     cursor: pointer;
     
@@ -69,22 +68,17 @@ body{
 
 .search input{
     border: none;
-    padding-top: 4%;
-    padding-bottom: 4%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     padding-left: 10%;
     border-radius: 15px;
     width: 90%;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
     font-family: 'Space Mono', monospace;
     background-color: white;
     outline: none;
-    
-    
-    
- 
 }
-
-
 
 .search form{
 
@@ -104,10 +98,6 @@ body{
     width: 30px;
     background: url(./assets/icon-search.svg) center / contain no-repeat;
   }
-
-
-
-
 
 
 .card{
@@ -133,8 +123,9 @@ body{
 }
 
 .avatar img{
-    padding: 10% 0 0 25%;
+    margin: 10% 0 0 25%;
     width: 50%;
+    border-radius: 80%;
 }
 
 .name{
@@ -166,10 +157,20 @@ body{
     border-radius: 15px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-right: 5%;
+    
 }
 
 .stats p{
-    
+    font-size: 1.3rem;
+    padding-left: 15%;
+    color: #4B6A9B ;
+    margin-bottom: 0;
+}
+.stats h2{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 15%;
     
 }
 
