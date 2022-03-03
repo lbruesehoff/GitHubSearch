@@ -4,6 +4,9 @@ body{
     letter-spacing: 1px;
 }
 
+.darkLight{
+ background-color: #141d2f;   
+}
 
 .container{
     display: grid;
@@ -32,9 +35,15 @@ body{
     display: inline;
 }
 
+
+
 .theme{
     justify-self: end;
     align-self: center;
+}
+
+.theme h2{
+    cursor: pointer;
 }
 
 
@@ -55,9 +64,9 @@ body{
     padding: 2% 4%;
     border: none;
     position: absolute;
-    left: 80%;
-    top: 20%;
-    font-size: 1.1rem;
+    left: 85%;
+    top: 12%;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     font-family: 'Space Mono', monospace;
     cursor: pointer;
@@ -137,6 +146,10 @@ body{
 #atName{
     color: #0079FF;
 }
+
+#bio{
+    color: #4B6A9B;
+}
 .name h1{
     display: inline;
     
@@ -178,4 +191,17 @@ body{
     grid-column: span 2;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.links p{
+    color: #4B6A9B;
+}
+
+.links a{
+    text-decoration: none;
+    color: #4B6A9B;
+}
+
+.links a:hover{
+    text-decoration: underline;
 }
