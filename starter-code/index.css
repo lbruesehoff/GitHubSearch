@@ -8,6 +8,14 @@ body{
  background-color: #141d2f;   
 }
 
+.devFinder{
+    color: white;
+}
+
+.cardTheme{
+    background-color:#1e2a46;  
+}
+
 .container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -123,7 +131,7 @@ body{
     transition: 0.3s;
     width: 100%;
     border-radius: 15px;
-    background-color:#FEFEFE ;
+    
 }
 
 .avatar{

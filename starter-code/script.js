@@ -3,14 +3,26 @@ let form = document.getElementById("searchForm");
 
 let darkLight = () =>{
     let body = document.body;
+    let title = document.querySelector("#devFinder");
+    let card = document.querySelector("#card");
     body.classList.toggle('darkLight');
+    title.classList.toggle('devFinder');
+    card.classList.toggle('cardTheme');
+    let svgTheme = document.querySelector('#svgTheme');
     let theme = document.querySelector('#theme');
 
     if(theme.innerHTML === "LIGHT"){
-        return theme.innerHTML = "DARK";
+        let dark = theme.innerHTML = "DARK";
+        let svgDark = svgTheme.src = "./assets/icon-moon.svg"
+        return (dark, svgDark);
     }else{
-        return theme.innerHTML = "LIGHT";
+        let light = theme.innerHTML = "LIGHT";
+        let svgLight = svgTheme.src = "./assets/icon-sun.svg";
+        return (light, svgLight);
     }
+
+
+    
     
 }
 
