@@ -3,22 +3,58 @@ let form = document.getElementById("searchForm");
 
 let darkLight = () =>{
     let body = document.body;
+    
     let title = document.querySelector("#devFinder");
     let card = document.querySelector("#card");
+    let username = document.querySelector("#username");
+    let bio = document.querySelector('#bio');
+    let stats = document.querySelector('#stats');
+    let input = document.querySelector("#search");
+    let join = document.querySelector("#joined");
+    let repo = document.querySelector("#repo");
+    let following = document.querySelector("#following");
+    let followers = document.querySelector("#followers");
+    let statsTitles = document.querySelector("#statsTitles");
+    let followersTitle = document.querySelector("#followersTitle");
+    let followingTitle = document.querySelector("#followingTitle");
+    let location = document.querySelector('#location');
+    let twitter = document.querySelector('#twitter');
+    let website = document.querySelector('#website');
+    let company = document.querySelector('#company');
     body.classList.toggle('darkLight');
-    title.classList.toggle('devFinder');
+    
+    input.classList.toggle('inputTheme');
+    input.classList.toggle('searchTheme')
+    username.classList.toggle('white');
+    bio.classList.toggle('white');
+    join.classList.toggle('white');
+    stats.classList.toggle('statsTheme');
+    title.classList.toggle('white');
+    statsTitles.classList.toggle('white');
+    followersTitle.classList.toggle('white');
+    followingTitle.classList.toggle('white');
+    repo.classList.toggle('white');
+    following.classList.toggle('white');
+    followers.classList.toggle('white');
     card.classList.toggle('cardTheme');
+    location.classList.toggle('white');
+    twitter.classList.toggle('white');
+    website.classList.toggle('white');
+    company.classList.toggle('white');
+
     let svgTheme = document.querySelector('#svgTheme');
     let theme = document.querySelector('#theme');
 
     if(theme.innerHTML === "LIGHT"){
         let dark = theme.innerHTML = "DARK";
         let svgDark = svgTheme.src = "./assets/icon-moon.svg"
-        return (dark, svgDark);
+        let darkFont = theme.classList.toggle('grey');
+        return (dark, svgDark, darkFont);
     }else{
         let light = theme.innerHTML = "LIGHT";
         let svgLight = svgTheme.src = "./assets/icon-sun.svg";
-        return (light, svgLight);
+        let fontColor = theme.classList.toggle('white');
+        return (light, svgLight, fontColor);
     }
 
 
