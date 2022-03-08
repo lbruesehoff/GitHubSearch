@@ -8,6 +8,7 @@ let darkLight = () =>{
     let card = document.querySelector("#card");
     let username = document.querySelector("#username");
     let bio = document.querySelector('#bio');
+    let mobileBio = document.querySelector('#mobileBio');
     let stats = document.querySelector('#stats');
     let input = document.querySelector("#search");
     let join = document.querySelector("#joined");
@@ -27,6 +28,7 @@ let darkLight = () =>{
     input.classList.toggle('searchTheme')
     username.classList.toggle('white');
     bio.classList.toggle('white');
+    mobileBio.classList.toggle('white');
     join.classList.toggle('white');
     stats.classList.toggle('statsTheme');
     title.classList.toggle('white');
@@ -91,6 +93,7 @@ form.addEventListener('submit', function(e){
         };
 
         document.querySelector('#bio').innerHTML = bio();
+        document.querySelector('#mobileBio').innerHTML = bio();
 
         let date = data.created_at; 
         const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
