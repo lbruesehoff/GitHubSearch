@@ -139,7 +139,7 @@ form.addEventListener('submit', function(e){
         document.querySelector('#company').innerHTML = `<img src="./assets/icon-company.svg" alt=""> ${company()}`;
 
         let website = () => {
-            if( data.blog == null){
+            if( data.blog == ""){
                 return "Not Available";
             }else{
                 return data.blog;
@@ -147,8 +147,14 @@ form.addEventListener('submit', function(e){
         };
         document.querySelector('#website').innerHTML = `<img src="./assets/icon-website.svg" alt=""> <a href="${website()}">${website()}</a>`;
         
+        let error = () => {
+            if(data.message = "Not Found"){
+                alert("Invalid Username")
+            }
 
-        console.log(data.bio)
+        }
+
+        console.log(data.message)
     })
 
 })
