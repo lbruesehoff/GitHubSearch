@@ -273,7 +273,7 @@ body{
         gap: .8rem;
         flex-direction: column;
         justify-content: space-evenly;
-        padding-top: 5%;
+        padding-top: 4%;
     }
 
     .title{
