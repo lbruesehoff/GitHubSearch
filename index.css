@@ -312,7 +312,7 @@ body{
     .search button{
         margin: 0;
         padding: 4% 3%;
-        left: 73%;
+        left: 73.5%;
         top: 10%;
         font-size: .8rem;
     }
@@ -321,7 +321,7 @@ body{
         border: none;
         margin-left: 5%;
         width: 75%;
-        font-size: .8rem;
+        font-size: .9rem;
         padding: 6% 7.5%;
         letter-spacing: 1px;
     }
