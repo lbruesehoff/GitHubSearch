@@ -78,6 +78,11 @@ form.addEventListener('submit', function(e){
     fetch("https://api.github.com/users/"+originalName)
     .then((results) => results.json())
     .then((data) => {
+
+        if(data.message){
+           return alert("Invalid Username");
+        }
+
         console.log(data)
 
         document.querySelector('.avatar').innerHTML = ` <img src="${data.avatar_url}" />`;
@@ -147,12 +152,6 @@ form.addEventListener('submit', function(e){
         };
         document.querySelector('#website').innerHTML = `<img src="./assets/icon-website.svg" alt=""> <a href="${website()}">${website()}</a>`;
         
-        let error = () => {
-            if(data.message = "Not Found"){
-                alert("Invalid Username")
-            }
-
-        }
 
         console.log(data.message)
     })
