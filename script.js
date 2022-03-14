@@ -58,13 +58,82 @@ let darkLight = () =>{
         let fontColor = theme.classList.toggle('white');
         return (light, svgLight, fontColor);
     }
+};
+
+// Auto Fill lbruesehoff when user enters app
+fetch("https://api.github.com/users/lbruesehoff")
+.then((results) => results.json())
+.then((e) => {
+
+    document.querySelector('.avatar').innerHTML = ` <img src="${e.avatar_url}" />`;
+    document.querySelector('#username').innerHTML = `${e.name}`;
+    document.querySelector('#atName').innerHTML = `@${e.login}`;
+
+    let bioFill = () =>{
+        if(e.bio == null){
+            return `This profile has no bio`;
+        }else{
+            return e.bio;
+        };
+    };
+
+    document.querySelector('#bio').innerHTML = bioFill();
+    document.querySelector('#mobileBio').innerHTML = bioFill();
+
+    let dateFill = e.created_at; 
+        const monthNamesFill = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        let timestampFill = new Date(dateFill).getTime();
+        let Days = new Date(timestampFill).getDate();
+        let Months = new Date(timestampFill).getMonth() + 1;
+        let Years = new Date(timestampFill).getFullYear();
+        let dateFormateFill = `${Days} ${monthNamesFill[Months]} ${Years}`;
+        document.querySelector('#joined').innerHTML = `Joined ${dateFormateFill}`;
+
+        document.querySelector('#repo').innerHTML = `${e.public_repos}`;
+        document.querySelector('#followers').innerHTML = `${e.followers}`;
+        document.querySelector('#following').innerHTML = `${e.following}`;
 
 
-    
-    
-}
+        let location = () => {
+            if( e.location == null){
+                return "Not Available";
+            }else{
+                return e.location;
+            }
+        };
+        document.querySelector('#location').innerHTML = `<img src="./assets/icon-location.svg" alt=""> ${location()}`;
+        
 
+        let twitter = () => {
+            if( e.twitter == null){
+                return "Not Available";
+            }else{
+                return e.twitter_username;
+            }
+        };
+        document.querySelector('#twitter').innerHTML = `<img src="./assets/icon-twitter.svg" alt=""> ${twitter()}`;
 
+     let company = () => {
+            if( e.company == null){
+                return "Not Available";
+            }else{
+                return e.company;
+            }
+        };
+
+        document.querySelector('#company').innerHTML = `<img src="./assets/icon-company.svg" alt=""> ${company()}`;
+
+        let website = () => {
+            if( e.blog == ""){
+                return "Not Available";
+            }else{
+                return e.blog;
+            }
+        };
+        document.querySelector('#website').innerHTML = `<img src="./assets/icon-website.svg" alt=""> <a href="${website()}">${website()}</a>`;
+        
+})
 
 form.addEventListener('submit', function(e){
     e.preventDefault()
@@ -82,8 +151,6 @@ form.addEventListener('submit', function(e){
         if(data.message){
            return alert("Invalid Username");
         }
-
-        console.log(data)
 
         document.querySelector('.avatar').innerHTML = ` <img src="${data.avatar_url}" />`;
         document.querySelector('#username').innerHTML = `${data.name}`;
@@ -156,4 +223,6 @@ form.addEventListener('submit', function(e){
         console.log(data.message)
     })
 
-})
+});
+
+console.log("")

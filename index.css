@@ -47,7 +47,7 @@ body{
 
 .container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
     flex-direction: column;
     justify-content: space-evenly;
@@ -238,7 +238,7 @@ body{
     text-decoration: underline;
 }
 
-@media (min-width: 1920px) and (max-width: 2560px)  {
+@media (min-width: 1025px) and (max-width: 2560px)  {
     .search button{
         background-color:#0079FF ;
         border-radius: 15px;
@@ -253,14 +253,17 @@ body{
         letter-spacing: 1px;
         font-family: 'Space Mono', monospace;
         cursor: pointer;
-    
+    }
+
+    input{
+        padding: 9% 0%;
     }
 }
 
 @media only screen
     and (min-device-width: 180px) 
     and (max-device-width: 599px) 
-    and (-webkit-min-device-pixel-ratio: 2){
+    {
    
     html,body{
         overflow-x: hidden;
@@ -313,7 +316,7 @@ body{
     .search button{
         margin: 0;
         padding: 4% 3%;
-        left: 73.5%;
+        left: 73%;
         top: 10%;
         font-size: .8rem;
     }
@@ -322,9 +325,9 @@ body{
         border: none;
         margin-left: 5%;
         width: 75%;
-        font-size: .9rem;
+        font-size: .8rem;
         padding: 6% 7.5%;
-        letter-spacing: 1px;
+        letter-spacing: .5px;
     }
 
     .search label {
@@ -337,7 +340,7 @@ body{
         left: 7%;
         top: 0;
         bottom: 0;
-        width: 18px;
+        width: 17px;
         background: url(./assets/icon-search.svg) center / contain no-repeat;
       }
 
@@ -345,12 +348,12 @@ body{
           width: 100%;
       }
       .card{
-          margin-left: 5%;
+        margin-left: 5%;
         grid-column: span 2;
         align-self: center;
         display:grid ;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: .5fr .5fr .5fr 1fr;
+        grid-template-rows: .5fr .4fr .5fr 1fr;
         gap: 1rem;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition: 0.3s;
@@ -391,7 +394,7 @@ body{
     #mobileBio{
         color: #4B6A9B;
         grid-column: span 3;
-        margin-left:5%;
+        margin-left:7%;
         display: block;
         
     
@@ -462,7 +465,7 @@ body{
     }
 }
 
-@media (min-width: 600px) and (max-width: 1280px) {
+@media (min-width: 700px) and (max-width: 1024px) {
   
     .container{
         display: grid;
@@ -636,7 +639,7 @@ body{
     .links{
         grid-column: span 3;
         display: grid;
-        font-size:.8rem;
+        font-size:.9rem;
         grid-template-columns: repeat(2, 1fr);
         margin-left: 7%;
     }
